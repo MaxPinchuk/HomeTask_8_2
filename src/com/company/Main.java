@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.Arrays;
-
 /**
  * Создать класс Score со след. полями:
  * String category
@@ -12,6 +10,7 @@ import java.util.Arrays;
  * Массив static Score[] data, размером 4.
  * Этот массив нужно проинициализировать с помощью статического блока инициализации.
  * Заполнить нужно созданными Score c категориями: views, actions, sharings, buyings
+ * <p>
  * Создать класс Main, в нем создать цикл, который выводит на экран данные из  GlobalRating.
  * Для этого обращайтесь к массиву через  GlobalRating.data;
  * <p>
@@ -23,13 +22,19 @@ import java.util.Arrays;
  */
 
 public class Main {
+
     public static void main(String[] args) {
+        for (int i = 0; i < GlobalRating.data.length; i++) {
+            //Вариант 1
+            // System.out.println(GlobalRating.data[i].category + " " + Arrays.toString(GlobalRating.data[i].statistic));
 
-        static {
 
+// Вариант 2
+            System.out.print(GlobalRating.data[i].category + ": ");
+            for (int j = 0; j < GlobalRating.data[i].statistic.length; j++) {
+                System.out.print(GlobalRating.data[i].statistic[j] + ", ");
+            }
+            System.out.println();
         }
-
-
-        System.out.println(Arrays.toString());
     }
 }

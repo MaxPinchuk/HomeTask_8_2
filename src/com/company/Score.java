@@ -4,7 +4,7 @@ public class Score {
 
     String category;
 
-    static double[] statistic = new double[10];
+    double[] statistic = new double[10];
 
     {
         statistic = new double[10];
