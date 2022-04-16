@@ -8,8 +8,8 @@ public class Score {
 
     {
         statistic = new double[10];
-        for (int i = 0; i < 10; i++) {
-            statistic[i] = i * 1;
+        for (int i = 0; i < statistic.length; i++) {
+            statistic[i] = Math.random() * 1;
         }
     }
 }
